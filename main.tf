@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "storage1" {
-for_each = tomap(var.abcd)
+  for_each = tomap(var.abcd)
 
   name                     = each.value.name
   resource_group_name      = each.value.resource_group_name
@@ -7,6 +7,6 @@ for_each = tomap(var.abcd)
   account_tier             = each.value.account_tier
   account_replication_type = each.value.account_replication_type
 
- 
+
 }
 
